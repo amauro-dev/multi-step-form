@@ -1,7 +1,17 @@
 {
+  "compilerOptions": {
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "skipLibCheck": true
+  },
   "files": [],
   "references": [
-    { "path": "./tsconfig.app.json" },
+    { "path": "./apps" },
+    { "path": "./packages/ui" },
     { "path": "./tsconfig.node.json" }
   ]
 }

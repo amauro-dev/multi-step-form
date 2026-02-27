@@ -1,7 +1,7 @@
 {
   "name": "multi-step-form",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.2.1",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^4.2.1",
+    "zod": "^4.3.6",
+    "@multi-step-form/ui": "workspace:*"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
