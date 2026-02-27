@@ -22,10 +22,10 @@ npm-debug.log*
 /coverage
 
 # Production
-/build
-/dist
-/.next
-/out
+apps/build
+apps/dist
+apps/.next
+apps/out
 
 # IDEs and editors
 /.idea
