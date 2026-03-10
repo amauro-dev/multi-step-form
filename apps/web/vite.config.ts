@@ -5,27 +5,24 @@ import { resolve } from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
-  root: "./apps",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
-      "@multi-step-form/ui": resolve(__dirname, "./packages/ui/src"),
+      "@multi-step-form/ui": resolve(__dirname, "../../packages/ui/src"),
     },
   },
   server: {
     fs: {
-      // allow serving files from the ui package and the apps root
       allow: [
-        resolve(__dirname, "./packages/ui"),
-        resolve(__dirname, "./packages/ui/src"),
-        resolve(__dirname, "./apps"),
+        resolve(__dirname, "../../packages/ui"),
+        resolve(__dirname, "../../packages/ui/src"),
+        __dirname,
       ],
     },
     watch: {
-      // use absolute negation so chokidar doesn't ignore the external src
       ignored: [
         "**/node_modules/**",
-        `!${resolve(__dirname, "packages/ui/src")}/**`,
+        `!${resolve(__dirname, "../../packages/ui/src")}/**`,
       ],
     },
   },
@@ -34,3 +31,4 @@ export default defineConfig({
     exclude: ["@multi-step-form/ui"],
   },
 });
+

@@ -5,6 +5,7 @@
 
 # Dependencies
 /node_modules
+/.pnpm-store
 /.pnp
 .pnp.js
 yarn.debug.log*
@@ -22,6 +23,8 @@ npm-debug.log*
 /coverage
 
 # Production
+apps/node_modules
+apps/web/node_modules
 apps/build
 apps/dist
 apps/.next
