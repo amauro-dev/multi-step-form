@@ -4,13 +4,12 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "pnpm --filter @multi-step-form/app dev",
+    "build": "tsc -b && pnpm --filter @multi-step-form/app build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "pnpm --filter @multi-step-form/app preview"
   },
   "dependencies": {
-    "@multi-step-form/ui": "workspace:*",
     "@tailwindcss/vite": "^4.2.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",

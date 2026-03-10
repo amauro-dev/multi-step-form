@@ -13,5 +13,5 @@
     "moduleDetection": "force",
     "noEmit": true
   },
-  "include": ["eslint.config.js", "vite.config.ts"]
+  "include": ["eslint.config.js", "apps/web/vite.config.ts"]
 }

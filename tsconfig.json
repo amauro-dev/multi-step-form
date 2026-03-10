@@ -10,7 +10,7 @@
   },
   "files": [],
   "references": [
-    { "path": "./apps" },
+    { "path": "./apps/web" },
     { "path": "./packages/ui" },
     { "path": "./tsconfig.node.json" }
   ]
