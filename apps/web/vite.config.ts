@@ -9,6 +9,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@multi-step-form/ui": resolve(__dirname, "../../packages/ui/src"),
+      "@multi-step-form/utils": resolve(__dirname, "../../packages/utils"),
     },
   },
   server: {
@@ -16,6 +17,7 @@ export default defineConfig({
       allow: [
         resolve(__dirname, "../../packages/ui"),
         resolve(__dirname, "../../packages/ui/src"),
+        resolve(__dirname, "../../packages/utils"),
         __dirname,
       ],
     },
@@ -23,12 +25,13 @@ export default defineConfig({
       ignored: [
         "**/node_modules/**",
         `!${resolve(__dirname, "../../packages/ui/src")}/**`,
+        `!${resolve(__dirname, "../../packages/utils")}/**`,
       ],
     },
   },
   optimizeDeps: {
-    // don't pre-bundle the local workspace package — let Vite load source for HMR
-    exclude: ["@multi-step-form/ui"],
+    // don't pre-bundle local workspace packages — let Vite load source for HMR
+    exclude: ["@multi-step-form/ui", "@multi-step-form/utils"],
   },
 });
 
